@@ -1,0 +1,138 @@
+/*-------------VARIABLES--------------*/
+// No need
+/*-----------COMMON STYLES------------*/
+html {
+  font-size: 10px;
+}
+body {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.wrapper {
+  max-width: 1100px;
+  width: 95%;
+  margin: 0 auto;
+}
+.btn {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 1.8rem;
+  letter-spacing: 0.27px;
+  padding: 2.2rem 7.4rem;
+  border-radius: 4px;
+  background-color: #aaa;
+  text-transform: uppercase;
+  box-shadow: 0 6px #888;
+  margin: 6rem auto 0;
+  &:hover {
+    box-shadow: 0 4px #888;
+  	top: 2px;
+  }
+  &:active {
+    box-shadow: none;
+	  top: 6px;
+  }
+}
+/*---------------HEADER---------------*/
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 5rem;
+  color: #fff;
+}
+.header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__item {
+  display: inline-block;
+  margin-left: 5px;
+}
+.menu__link {
+  display: inline-block;
+  padding: .7rem 2rem;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  transition: background-color .2s;
+  &:hover {
+      background-color: #643a79;
+  }
+}
+.menu__toggle {
+  display: none;
+  width: 20px;
+  height: 16px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+.toggle__item {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transition: transform .3s;
+}
+.toggle__item:not(.toggle__item_4) {
+  margin-bottom: 5px;
+}
+.toggle__item_2 {
+  position: absolute;
+  top: 7px;
+}
+.menu__toggle_active {
+  .toggle__item_1,
+  .toggle__item_4 {
+    transform: scale(0);
+  }
+  .toggle__item_2 {
+    transform: rotate(45deg);
+  }
+  .toggle__item_3 {
+    transform: rotate(-45deg);
+  }
+}
+/*----------------HERO----------------*/
+.hero {
+  padding: 24rem 0 14.5rem;
+  background-color: #87509c;
+  color: #fff;
+}
+.hero__text {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 4.2rem;
+  line-height: 1.1;
+}
+.btn_orange {
+  background-color: #eb7d4b;
+  box-shadow: 0 6px #c86a40;
+  &:hover {
+    box-shadow: 0 4px #c86a40;
+  }
+  &:active {
+    box-shadow: none;
+  }
+}
+/*--------------SERVICES--------------*/
+
+/*----------------TEAM----------------*/
+
+/*--------------PORTFOLIO-------------*/
+
+/*---------------COMMENTS-------------*/
+
+/*---------------SKILLS---------------*/
+
+/*---------------CONTACT--------------*/
+
+/*---------------FOOTER---------------*/
