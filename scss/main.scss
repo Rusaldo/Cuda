@@ -1,3 +1,5 @@
+// TODO: POPUP FOR CONTACT FORM
+// TODO: SMOOTH LOAD MORE PORTFOLIO
 /*-----------COMMON STYLES------------*/
 html {
   font-size: 10px;
@@ -346,7 +348,122 @@ body {
   }
 }
 /*--------------COMMENTS--------------*/
-
+.comments {
+  background-color: #d74680;
+  color: #fff;
+}
+.comments__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.comments__comment {
+  width: 50%;
+  display: flex;
+  margin-top: 5rem;
+  padding: 0 3%;
+}
+.comment__img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.comment__text {
+  text-align: left;
+  padding-left: 8%;
+}
+.comment__quote {
+  font-size: 2.1rem;
+  font-style: italic;
+  margin: 0 0 3rem;
+}
+.comment__author {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  letter-spacing: 0.48px;
+  line-height: 1;
+  font-style: normal;
+  font-weight: 700;
+}
+.comment__role {
+  font-size: 1.8rem;
+  color: #ffdd99;
+  display: block;
+  margin-top: 1rem;
+}
 /*---------------CONTACT--------------*/
-
+.contact {
+  background-color: #3c5499;
+  color: #fff;
+}
+.contact__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 3%;
+}
+.form__name,
+.form__email,
+.form__textarea {
+  border: 2px solid #273a71;
+  background-color: #273a71;
+  padding: 1.9rem 2.5rem;
+  border-radius: 4px;
+  width: 48%;
+  margin-top: 7rem;
+  color: #fff;
+  outline: none;
+}
+.form__name:focus,
+.form__email:focus,
+.form__textarea:focus {
+  border: 2px solid #299ec5;
+}
+.form__name::placeholder,
+.form__email::placeholder,
+.form__textarea::placeholder {
+  color: #ccc;
+  font-size: 1.5rem;
+}
+.form__textarea {
+  width: 100%;
+  height: 20rem;
+  margin-top: 2.5rem;
+}
+.form__btn {
+  border: none;
+  outline: none;
+}
+.btn_blue {
+  background-color: #30bae7;
+  box-shadow: 0 6px #299ec5;
+  &:hover {
+    box-shadow: 0 4px #299ec5;
+  }
+  &:active {
+    box-shadow: 0 0 #299ec5;
+  }
+}
 /*---------------FOOTER---------------*/
+.footer {
+  padding: 4rem 0;
+  background-color: #344b8e;
+  color: #fff;
+}
+.footer__list {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 2.4rem;
+}
+.footer__item {
+  flex: 1;
+  padding: 0 2%;
+  transition: color .2s;
+  text-align: center;
+  &:hover {
+    color: #30bae7;
+  }
+}

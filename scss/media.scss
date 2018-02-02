@@ -20,6 +20,9 @@
   html {
     font-size: 8.5px;
   }
+  .comments__comment {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 650px) {
   .menu {
@@ -83,7 +86,21 @@
   .services__service,
   .team__member,
   .skills__skill,
-  .portfolio__item {
+  .portfolio__item, {
     width: 100%;
+  }
+  .comments__comment {
+    flex-direction: column;
+  }
+  .comment__text {
+    text-align: center;
+    padding: 0;
+  }
+  .form__name,
+  .form__email {
+    width: 100%;
+  }
+  .form__email {
+    margin-top: 2.5rem;
   }
 }
