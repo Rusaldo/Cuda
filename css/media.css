@@ -10,6 +10,11 @@
   html {
     font-size: 9px;
   }
+  .services__service,
+  .team__member,
+  .skills__skill {
+    width: 50%;
+  }
 }
 
 /*---------------TABLETS----------------*/
@@ -97,5 +102,11 @@
 @media screen and (max-width: 480px) {
   html {
     font-size: 8px;
+  }
+  .services__service,
+  .team__member,
+  .skills__skill,
+  .portfolio__item {
+    width: 100%;
   }
 }

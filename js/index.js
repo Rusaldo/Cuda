@@ -19,4 +19,14 @@ $( document ).ready(function() {
     }, 500);
   });
 
+  //-------- PORTFOLIO LOAD MORE ---------
+  $(".btn_green").click(function() {
+    $(".portfolio__list").toggleClass("portfolio__list_expanded");
+    if ($(".portfolio__list").hasClass("portfolio__list_expanded")) {
+      $(this).text("Show less projects");
+    } else {
+      $(this).text("Load more projects");
+    }
+  });
+
 });

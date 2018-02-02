@@ -1,5 +1,3 @@
-/*-------------VARIABLES--------------*/
-// No need
 /*-----------COMMON STYLES------------*/
 html {
   font-size: 10px;
@@ -18,8 +16,7 @@ body {
 .btn {
   display: inline-block;
   position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  cursor: pointer;
   color: #fff;
   font-size: 1.8rem;
   letter-spacing: 0.27px;
@@ -27,16 +24,38 @@ body {
   border-radius: 4px;
   background-color: #aaa;
   text-transform: uppercase;
-  box-shadow: 0 6px #888;
   margin: 6rem auto 0;
+  box-shadow: 0 6px #888;
   &:hover {
     box-shadow: 0 4px #888;
   	top: 2px;
   }
   &:active {
-    box-shadow: none;
+    box-shadow: 0 0 #888;
 	  top: 6px;
   }
+}
+.page-section {
+  padding: 12rem 0;
+  text-align: center;
+}
+.section-heading {
+  font-size: 4rem;
+  letter-spacing: 4px;
+  line-height: 1;
+  text-transform: uppercase;
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    width: 9rem;
+    height: 4px;
+    background: rgba(0,0,0,.15);
+    margin: 2rem auto;
+  }
+}
+.section-descr {
+  font-size: 1.8rem;
 }
 /*---------------HEADER---------------*/
 .header {
@@ -106,6 +125,7 @@ body {
   padding: 24rem 0 14.5rem;
   background-color: #87509c;
   color: #fff;
+  text-align: center;
 }
 .hero__text {
   margin: 0 auto;
@@ -124,14 +144,208 @@ body {
   }
 }
 /*--------------SERVICES--------------*/
-
+.services {
+  background-color: #17c2a4;
+  color: #fff;
+}
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+.services__service {
+  padding: 0 3%;
+  width: 25%;
+  margin-top: 5rem;
+}
+.service__icon {
+  max-width: 100%;
+  margin-left: 10%;
+  height: 130px;
+  text-align: right;
+}
+.service__heading {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.48px;
+  margin: 2.5rem 0;
+}
 /*----------------TEAM----------------*/
-
+.team {
+  background-color: #e7f1f8;
+  color: #3c4761;
+  padding-bottom: 6rem;
+}
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 7.5rem;
+}
+.team__member {
+  padding: 0 3%;
+  width: 25%;
+  margin-bottom: 5rem;
+}
+.member__pic {
+  max-width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #878787;
+  margin: 0 auto 4rem;
+}
+.member__img {
+  max-width: 100%;
+}
+.member__heading {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.48px;
+}
+.member__role {
+  display: block;
+  margin-bottom: 1.5rem;
+  color: #30bae7;
+  font-size: 1.6rem;
+}
+.social__list {
+  margin: 3rem auto 0;
+  display: flex;
+  max-width: 170px;
+  justify-content: space-between;
+}
+.social__icon {
+  display: inline-block;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background: #bdd1df url(../img/social-sprite.png) no-repeat;
+  background-position: -1px -1px;
+  transition: opacity .2s;
+  &:hover {
+    opacity: .5;
+  }
+}
+.social__icon_2 {
+  background-position: -100px -1px;
+}
+.social__icon_3 {
+  background-position: -34px -1px;
+}
+.social__icon_4 {
+  background-position: -67px -1px;
+}
+/*----------------SKILLS--------------*/
+.skills {
+  color: #3c4761;
+}
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+}
+.skills__skill {
+  width: 25%;
+  margin-top: 5rem;
+}
+.skill__diagram {
+  max-width: 100%;
+}
+.skill__heading {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  margin-top: 3rem;
+  letter-spacing: 0.48px;
+}
 /*--------------PORTFOLIO-------------*/
-
-/*---------------COMMENTS-------------*/
-
-/*---------------SKILLS---------------*/
+.portfolio {
+  background-color: #ffdd99;
+  color: #393939;
+}
+.tabs {
+  display: flex;
+  max-width: 380px;
+  width: 85%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 4rem auto 0;
+}
+.tabs__tab {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  background-color: rgba(0,0,0,.15);
+  padding: .5rem 2rem;
+  border-radius: 4px;
+  transition: background-color .2s;
+  cursor: pointer;
+  &:hover {
+    background-color: #fff;
+  }
+}
+.tabs__tab_active {
+  background-color: #fff;
+}
+.tabs__radio {
+  display: none;
+}
+.tabs__radio_1:checked ~ .portfolio__list > .portfolio__item {
+  display: block;
+}
+.tabs__radio_2:checked ~ .portfolio__list > .portfolio__item_web {
+  order: 1;
+  display: block;
+}
+.tabs__radio_3:checked ~ .portfolio__list > .portfolio__item_icons {
+  order: 1;
+  display: block;
+}
+.tabs__radio_4:checked ~ .portfolio__list > .portfolio__item_apps {
+  order: 1;
+  display: block;
+}
+.portfolio__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  max-height: 830px;
+  overflow: hidden;
+  @media screen and (max-width: 768px) {
+    max-height: 590px;
+  }
+  @media screen and (max-width: 320px) {
+    max-height: 510px;
+  }
+}
+.portfolio__item {
+  width: 50%;
+  order: 2;
+  display: none;
+}
+.portfolio__list_expanded {
+  max-height: none;
+}
+.portfolio__pic {
+  margin: 5rem 0 0;
+}
+.portfolio__img {
+  max-width: 100%;
+}
+.portfolio__text {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin: 2rem 0 0;
+}
+.btn_green {
+  margin-top: 8rem;
+  background-color: #17c2a4;
+  box-shadow: 0 6px #14a58c;
+  &:hover {
+    box-shadow: 0 4px #14a58c;
+  }
+  &:active {
+    box-shadow: 0 0 #14a58c;
+  }
+}
+/*--------------COMMENTS--------------*/
 
 /*---------------CONTACT--------------*/
 
